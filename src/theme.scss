@@ -1,0 +1,143 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$mat-black: (
+  50: #000000,
+  100: #000000,
+  200: #000000,
+  300: #000000,
+  400: #000000,
+  500: #000000,
+  600: #000000,
+  700: #000000,
+  800: #000000,
+  900: #000000,
+  A100: #000000,
+  A200: #000000,
+  A400: #000000,
+  A700: #000000,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100:#000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  )
+);
+
+$mat-white: (
+  50: #ffffff,
+  100: #ffffff,
+  200: #ffffff,
+  300: #ffffff,
+  400: #ffffff,
+  500: #ffffff,
+  600: #ffffff,
+  700: #ffffff,
+  800: #ffffff,
+  900: #ffffff,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #ffffff,
+  A700: #ffffff,
+  contrast: (
+    50: #ffffff,
+    100: #ffffff,
+    200: #ffffff,
+    300: #ffffff,
+    400: #ffffff,
+    500: white,
+    600: white,
+    700: white,
+    800: #ffffff,
+    900: #ffffff,
+    A100:#ffffff,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
+
+$mat-blue: (
+  50: #1a6ba5,
+  100: #1a6ba5,
+  200: #1a6ba5,
+  300: #1a6ba5,
+  400: #1a6ba5,
+  500: #1a6ba5,
+  600: #1a6ba5,
+  700: #1a6ba5,
+  800: #1a6ba5,
+  900: #1a6ba5,
+  A100: #1a6ba5,
+  A200: #1a6ba5,
+  A400: #1a6ba5,
+  A700: #1a6ba5,
+  contrast: (
+    50: #1a6ba5,
+    100: #1a6ba5,
+    200: #1a6ba5,
+    300: #1a6ba5,
+    400: #1a6ba5,
+    500: #1a6ba5,
+    600: #1a6ba5,
+    700: #1a6ba5,
+    800: #1a6ba5,
+    900: #1a6ba5,
+    A100:#1a6ba5,
+    A200: #1a6ba5,
+    A400: #1a6ba5,
+    A700: #1a6ba5,
+  )
+);
+
+$mat-green: (
+  50: #52ad52,
+  100: #52ad52,
+  200: #52ad52,
+  300: #52ad52,
+  400: #52ad52,
+  500: #52ad52,
+  600: #52ad52,
+  700: #52ad52,
+  800: #52ad52,
+  900: #52ad52,
+  A100: #52ad52,
+  A200: #52ad52,
+  A400: #52ad52,
+  A700: #52ad52,
+  contrast: (
+    50: #52ad52,
+    100: #52ad52,
+    200: #52ad52,
+    300: #52ad52,
+    400: #52ad52,
+    500: #52ad52,
+    600: #52ad52,
+    700: #52ad52,
+    800: #52ad52,
+    900: #52ad52,
+    A100:#52ad52,
+    A200: #52ad52,
+    A400: #52ad52,
+    A700: #52ad52,
+  )
+);
+
+$app-primary: mat-palette($mat-white);
+$app-accent:  mat-palette($mat-green);
+$app-warn:    mat-palette($mat-black);
+
+
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
+@include angular-material-theme($app-theme);

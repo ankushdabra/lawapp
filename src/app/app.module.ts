@@ -1,16 +1,61 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatCardModule} from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
+import {MatGridListModule} from '@angular/material/grid-list';
 
+
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+
+import { LawyerListComponent } from './lawyer/lawyer-list/lawyer-list.component';
+import { LawyerDetailsComponent } from './lawyer/lawyer-details/lawyer-details.component';
+import { FooterComponent } from './footer/footer.component';
+import { ConsumerComponent } from './consumer/consumer.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { ServicesComponent } from './services/services.component';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
-  ],
+    AppComponent,
+    HeaderComponent,
+    LawyerListComponent,
+    LawyerDetailsComponent,
+    FooterComponent,
+    ConsumerComponent,
+    SidenavComponent,
+    ServicesComponent
+    ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MatButtonModule,
+    MatToolbarModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatTabsModule,
+    MatSidenavModule,
+    MatCardModule,
+    MatListModule,
+    MatGridListModule
+  ],
+  exports: [
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatTabsModule,
+    MatSidenavModule,
+    MatCardModule,
+    MatListModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
