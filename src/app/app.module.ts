@@ -24,6 +24,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ConsumerComponent } from './consumer/consumer.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { ServicesComponent } from './services/services.component';
+import { LawyerItemComponent } from './lawyer-item/lawyer-item.component';
 
 
 
@@ -36,7 +37,8 @@ import { ServicesComponent } from './services/services.component';
     FooterComponent,
     ConsumerComponent,
     SidenavComponent,
-    ServicesComponent
+    ServicesComponent,
+    LawyerItemComponent
     ],
   imports: [
     BrowserModule,
