@@ -17,9 +17,10 @@ body {
 }
 
 .fixed-header {
-  position: sticky;
-  position: -webkit-sticky; /* For macOS/iOS Safari */
+  position: fixed;
+  position: -webkit-fixed; /* For macOS/iOS Safari */
   top: 0; /* Sets the sticky toolbar to be on top */
+  width: 100%;
   z-index: 1000;
 }
 
@@ -31,15 +32,7 @@ mat-card {
 }
 
 
-mat-button{
-  background-color: #52ad52;
-}
-mat-raised-button{
-  background-color: #52ad52;
-}
-.done {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  color: white;
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
