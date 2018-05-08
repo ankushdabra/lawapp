@@ -1,14 +1,30 @@
-<app-header></app-header>
+<div class="fixed-header">
+  <mat-toolbar color="warn" flex="50" fxLayout="row" fxLayoutAlign="start center" class="mat-elevation-z2">
+    <img type="image/x-icon" src="favicon.ico" style="margin: 12px" />
+    <span style="color: white">Law App</span>
+    <span class="example-fill-remaining-space"></span>
+    <span style="margin-left:12px;margin-right: 12px">
+      <button color="primary" mat-button href="#">SERVICES</button>
+      <button color="primary" mat-button href="#">FAQ</button>
+      <button color="primary" mat-button href="#">LOGIN/SIGNUP</button>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon color="primary">menu</mat-icon>
+      </button>
+      <mat-menu  #menu="matMenu">
+        <button mat-menu-item  *ngFor="let link of arraySideNav">{{link}}</button>
+      </mat-menu>
+    </span>
+  </mat-toolbar>
+</div>
+
 <div class="banner-image">
-    <div class="banner-text">
-        <p style="font-size: 1.8em;font-weight: 100">Get Legal Advice From Experts</p>
-      <h3 style="font-size: 3.5em;font-weight: 100">Where Law and Business Meet</h3>
-    </div>
+  <div class="banner-text">
+    <p style="font-size: 1.8em;font-weight: 100">Get Legal Advice From Experts</p>
+    <h3 style="font-size: 3.5em;font-weight: 100">Where Law and Business Meet</h3>
   </div>
-<div class="row" style="background: #303030;overflow-x:hidden;">
+</div>
+<div style="background: #303030;overflow-x:hidden;">
   <div class="col-md-8">
     <app-services></app-services>
-  </div>
-  <div class="col-md-4">
   </div>
 </div>
