@@ -8,7 +8,6 @@ import { Component, OnInit, NgZone, ViewChild, Injectable } from '@angular/core'
 export class AppComponent {
 
   title = 'Law App';
-  arraySideNav = ['Lawyer\'s Zone', 'Consumer\'s Zone', 'My Account', 'Edit Account', 'Settings' ];
   constructor() {
   }
 

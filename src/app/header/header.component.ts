@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  arraySideNav = ['Lawyer\'s Zone', 'Consumer\'s Zone', 'My Account', 'Edit Account', 'Settings' ];
 
   constructor() { }
 
@@ -13,3 +14,4 @@ export class HeaderComponent implements OnInit {
   }
 
 }
+
