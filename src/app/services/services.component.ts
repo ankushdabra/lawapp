@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServicesComponent implements OnInit {
 
-
   breakpoint: number;
+  states = ['Delhi', 'Haryana', 'Uttar Pradesh', 'Uttarakhand'];
+
   constructor() {}
 
   ngOnInit() {
