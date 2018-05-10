@@ -37,3 +37,8 @@ html, body {
   overflow-x: hidden;
 }
 
+.full-width-div {
+  position: absolute;
+  width: 100%;
+  left: 0;
+}

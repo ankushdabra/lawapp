@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import {
   MatButtonModule,
@@ -11,7 +12,8 @@ import {
   MatMenuModule,
   MatListModule,
   MatGridListModule,
-  MatSelectModule
+  MatSelectModule,
+  MatInputModule
 } from '@angular/material';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -54,6 +56,9 @@ const appRoutes: Routes = [
     MatGridListModule,
     MatSelectModule,
     MatMenuModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
