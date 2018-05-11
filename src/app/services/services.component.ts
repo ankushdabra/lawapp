@@ -11,61 +11,56 @@ export class ServicesComponent implements OnInit {
 
   breakpoint: number;
   states = ['Delhi', 'Haryana', 'Uttar Pradesh', 'Uttarakhand'];
-  data: LawyerListModel[] = [
+  corePracticeArray: LawyerListModel[] = [
     new LawyerListModel(
-      'Madan Bhatiwal',
-      'Practicing Since:2009',
-      'Kolkata',
+      'CRIMINAL',
+      '',
+      '',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     ),
     new LawyerListModel(
-      'Madan Bhatiwal',
-      'Practicing Since:2009',
-      'Kolkata',
+      'CIVIL',
+      '',
+      '',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     ),
     new LawyerListModel(
-      'Madan Bhatiwal',
-      'Practicing Since:2009',
-      'Kolkata',
+      'PROPERTY DISPUTE',
+      '',
+      '',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     ),
     new LawyerListModel(
-      'Madan Bhatiwal',
-      'Practicing Since:2009',
-      'Kolkata',
+      'IMMIGRATION',
+      '',
+      '',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     ),
     new LawyerListModel(
-      'Madan Bhatiwal',
-      'Practicing Since:2009',
-      'Kolkata',
+      'MUSLIM LAW',
+      '',
+      '',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     ),
     new LawyerListModel(
-      'Madan Bhatiwal',
-      'Practicing Since:2009',
-      'Kolkata',
+      'MOTOR ACCIDENT',
+      '',
+      '',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     ),
     new LawyerListModel(
-      'Madan Bhatiwal',
-      'Practicing Since:2009',
-      'Kolkata',
+      'INSURANCE LAW',
+      '',
+      '',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     ),
     new LawyerListModel(
-      'Madan Bhatiwal',
-      'Practicing Since:2009',
-      'Kolkata',
+      'CHILD CUSTODY',
+      '',
+      '',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     ),
-    new LawyerListModel(
-      'Madan Bhatiwal',
-      'Practicing Since:2009',
-      'Kolkata',
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    )
+
   ];
   constructor() {}
 

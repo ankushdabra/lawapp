@@ -5,27 +5,25 @@
   </div>
 </div>
 
-<!-- <div class="grid-container" style="background: #303030">
-      <div *ngFor="let i of data">
-          <app-lawyer-item [item]=i></app-lawyer-item>
+<div style="background-color: #404040;align-content: center;">
+    <div style="padding-top: 20px;padding-bottom: 20px">
+        <h1 style="width:100%;text-align: center;color: white">CORE PRACTICE AREAS</h1>
         </div>
-  </div> -->
-<div style="background-color: #505050;align-content: center;">
-  <mat-card style="width: 100%;height: 15%;background-color: #303030;">
-    <mat-card-title style="font-size:1.8em; font-weight: 400;color: white">CORE PRACTICE AREAS
-    </mat-card-title>
-  </mat-card>
   <div class="container">
-    <div class="grid-container" style="margin-top: 20px">
-      <app-core-practice-item></app-core-practice-item>
-      <app-core-practice-item></app-core-practice-item>
-      <app-core-practice-item></app-core-practice-item>
-      <app-core-practice-item></app-core-practice-item>
-      <app-core-practice-item></app-core-practice-item>
-      <app-core-practice-item></app-core-practice-item>
-      <app-core-practice-item></app-core-practice-item>
-      <app-core-practice-item></app-core-practice-item>
-      <app-core-practice-item></app-core-practice-item>
+    <div class="grid-container">
+      <div *ngFor="let i of corePracticeArray">
+        <app-core-practice-item [item]=i></app-core-practice-item>
+      </div>
     </div>
   </div>
-</div>
+
+  <div style="padding-top: 20px;padding-bottom: 20px">
+    <h1 style="width:100%;text-align: center;color: white">OUR SERVICES</h1>
+    </div>
+  <div class="container">
+    <div class="grid-container">
+      <div *ngFor="let i of corePracticeArray">
+        <app-core-practice-item [item]=i></app-core-practice-item>
+      </div>
+    </div>
+  </div>

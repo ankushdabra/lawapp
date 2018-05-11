@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-core-practice-item',
@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CorePracticeItemComponent implements OnInit {
 
+  @Input() item: {
+    name: String;
+    practiceTime: String;
+    location: String;
+    about: String;
+  };
   constructor() { }
 
   ngOnInit() {
