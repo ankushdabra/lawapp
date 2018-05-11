@@ -19,3 +19,13 @@
   transform: translate(-50%, -50%);
   color: white;
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 260px 260px 260px 260px;
+  grid-template-rows: auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
