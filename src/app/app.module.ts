@@ -13,7 +13,8 @@ import {
   MatListModule,
   MatGridListModule,
   MatSelectModule,
-  MatInputModule
+  MatInputModule,
+  MatDividerModule
 } from '@angular/material';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,6 +28,7 @@ import { ServicesComponent } from './services/services.component';
 import { LawyerItemComponent } from './lawyer/lawyer-item/lawyer-item.component';
 import { HeaderComponent } from './header/header.component';
 import { SignupComponent } from './signup/signup.component';
+import { CorePracticeItemComponent } from './core-practice-item/core-practice-item.component';
 
 const appRoutes: Routes = [
   { path: '', component: ServicesComponent },
@@ -42,7 +44,8 @@ const appRoutes: Routes = [
     ServicesComponent,
     LawyerItemComponent,
     HeaderComponent,
-    SignupComponent
+    SignupComponent,
+    CorePracticeItemComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +62,7 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatDividerModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

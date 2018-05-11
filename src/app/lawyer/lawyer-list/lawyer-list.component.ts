@@ -13,6 +13,24 @@ export class LawyerListComponent implements OnInit {
       'Practicing Since:2009',
       'Kolkata',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    ),
+    new LawyerListModel(
+      'Sushil Bali',
+      'Practicing Since:2009',
+      'Kolkata',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    ),
+    new LawyerListModel(
+      'Vivek Nasa',
+      'Practicing Since:2009',
+      'Kolkata',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    ),
+    new LawyerListModel(
+      'Prabhat Shroff',
+      'Practicing Since:2009',
+      'Kolkata',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     )
   ];
 
@@ -20,10 +38,6 @@ export class LawyerListComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.breakpoint = window.innerWidth <= 400 ? 1 : 4;
   }
 
-  onResize(event) {
-    this.breakpoint = event.target.innerWidth <= 400 ? 1 : 4;
-  }
 }
