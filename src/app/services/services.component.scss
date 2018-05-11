@@ -30,50 +30,41 @@
   margin-right: auto;
 }
 
-.menu-wrapper {
-  position: relative;
-  max-width: 500px;
-  height: 100px;
-  margin: 1em auto;
-  border: 1px solid black;
-  overflow-x: hidden;
+.scrolling-wrapper {
+  overflow-x: scroll;
   overflow-y: hidden;
-}
-
-.menu {
-  height: 120px;
-  background: #f3f3f3;
-  box-sizing: border-box;
   white-space: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
+
+  .card {
+    display: inline-block;
+  }
 }
 
-.item {
-  display: inline-block;
-  width: 100px;
-  height: 100%;
-  outline: 1px dotted gray;
-  padding: 1em;
-  box-sizing: border-box;
+.scrolling-wrapper-flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+  .card {
+    flex: 0 0 auto;
+    margin-right: 3px;
+  }
 }
-.paddles {
+
+.card {
+  border: 1px solid white;
+  width: 150px;
+  height: 75px;
+  background: black;
 }
-.paddle {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	width: 3em;
-}
-.left-paddle {
-	left: 0;
-}
-.right-paddle {
-	right: 0;
-}
-.hidden {
-	display: none;
+
+.scrolling-wrapper, .scrolling-wrapper-flexbox {
+  height: 75px;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 

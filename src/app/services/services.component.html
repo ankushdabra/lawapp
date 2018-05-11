@@ -7,27 +7,26 @@
 
 <div style="background-color: #404040;align-content: center;">
   <div class="container">
-      <div style="padding-top: 20px;">
-          <h1 style="width:100%;text-align: left;color: white">CORE PRACTICE AREAS</h1>
-        </div>
-        <mat-divider style="background-color: white;width: 100%;margin-bottom: 20px"></mat-divider>
+    <div style="padding-top: 20px;">
+      <h2 style="width:100%;text-align: left;color: white">CORE PRACTICE AREAS</h2>
+    </div>
+    <mat-divider style="background-color: white;width: 100%;margin-bottom: 20px"></mat-divider>
 
     <div class="grid-container">
       <div *ngFor="let i of corePracticeArray">
         <app-core-practice-item [item]=i></app-core-practice-item>
       </div>
     </div>
-  </div>
 
-  <div class="container">
-      <div style="padding-top: 20px;">
-          <h1 style="width:100%;text-align: left;color: white">OUR SERVICES</h1>
-        </div>
-        <mat-divider style="background-color: white;width: 100%;margin-bottom: 20px"></mat-divider>
+    <div style="padding-top: 20px;">
+      <h2 style="width:100%;text-align: left;color: white">OUR SERVICES</h2>
+    </div>
+    <mat-divider style="background-color: white;width: 100%;margin-bottom: 20px"></mat-divider>
     <div class="grid-container">
       <div *ngFor="let i of coreServicesArray">
         <app-core-practice-item [item]=i></app-core-practice-item>
       </div>
     </div>
   </div>
-  </div>
+</div>
+
