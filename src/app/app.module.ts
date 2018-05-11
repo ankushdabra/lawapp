@@ -13,7 +13,8 @@ import {
   MatListModule,
   MatGridListModule,
   MatSelectModule,
-  MatInputModule
+  MatInputModule,
+  MatDividerModule
 } from '@angular/material';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -61,6 +62,7 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatDividerModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

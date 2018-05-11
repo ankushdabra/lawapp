@@ -11,7 +11,16 @@ export class ServicesComponent implements OnInit {
 
   breakpoint: number;
   states = ['Delhi', 'Haryana', 'Uttar Pradesh', 'Uttarakhand'];
-  corePracticeArray: LawyerListModel[] = [
+  coreServicesArray: LawyerListModel[] = [
+    new LawyerListModel(
+      'TALK TO LAWYER',
+      '',
+      '',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    ),
+  ];
+
+corePracticeArray: LawyerListModel[] = [
     new LawyerListModel(
       'CRIMINAL',
       '',

@@ -6,9 +6,10 @@
 </div>
 
 <div style="background-color: #404040;align-content: center;">
-    <div style="padding-top: 20px;padding-bottom: 20px">
-        <h1 style="width:100%;text-align: center;color: white">CORE PRACTICE AREAS</h1>
-        </div>
+  <div style="padding-top: 20px;padding-bottom: 20px">
+    <h1 style="width:100%;text-align: center;color: white">CORE PRACTICE AREAS</h1>
+  </div>
+<mat-divider color="primary" ></mat-divider>
   <div class="container">
     <div class="grid-container">
       <div *ngFor="let i of corePracticeArray">
@@ -19,11 +20,41 @@
 
   <div style="padding-top: 20px;padding-bottom: 20px">
     <h1 style="width:100%;text-align: center;color: white">OUR SERVICES</h1>
-    </div>
+  </div>
   <div class="container">
     <div class="grid-container">
-      <div *ngFor="let i of corePracticeArray">
+      <div *ngFor="let i of coreServicesArray">
         <app-core-practice-item [item]=i></app-core-practice-item>
       </div>
     </div>
+  </div>
+
+
+  <div class="menu-wrapper">
+    <ul class="menu">
+      <li class="item">1</li>
+      <!--
+    -->
+      <li class="item">2</li>
+      <!--
+    -->
+      <li class="item">3</li>
+      <!--
+    -->
+      <li class="item">4</li>
+      <!--
+    -->
+      <li class="item">5</li>
+      <!--
+    -->
+      <li class="item">6</li>
+    </ul>
+
+    <div class="paddles">
+      <button class="left-paddle paddle hidden">
+         </button>
+          <button class="right-paddle paddle">
+          </button>
+    </div>
+
   </div>
