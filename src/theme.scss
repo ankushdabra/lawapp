@@ -137,6 +137,9 @@ $app-primary: mat-palette($mat-white);
 $app-accent:  mat-palette($mat-green);
 $app-warn:    mat-palette($mat-black);
 
+.mat-select-value{
+color: #ffffff;
+}
 
 $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 
