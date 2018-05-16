@@ -1,19 +1,46 @@
 <div class="fixed-header">
-    <mat-toolbar color="warn" flex="50" fxLayout="row" fxLayoutAlign="start center" class="mat-elevation-z2">
-      <img type="image/x-icon" src="favicon.ico" style="margin: 12px" />
-      <span style="color: white;font-size: 1em">Law App</span>
-      <span class="example-fill-remaining-space"></span>
-      <span style="margin-left:12px;margin-right: 12px">
-        <button color="primary" mat-button routerLink="/">SERVICES</button>
-        <button color="primary" mat-button routerLink="/">FAQ</button>
-        <button color="primary" mat-button routerLink="/signup">LOGIN/SIGNUP</button>
-        <button mat-icon-button [matMenuTriggerFor]="menu">
-          <mat-icon color="primary">menu</mat-icon>
-        </button>
-        <mat-menu style="background-color: #101010;" #menu="matMenu" >
-          <button mat-menu-item  *ngFor="let link of arraySideNav">{{link}}</button>
-        </mat-menu>
-      </span>
-    </mat-toolbar>
-  </div>
+  <mat-toolbar color="warn" flex="50" fxLayout="row" fxLayoutAlign="start center" class="mat-elevation-z2">
+    <img type="image/x-icon" src="favicon.ico" style="margin: 12px" />
+    <span style="color: white;font-size: 1em">Law App</span>
 
+    <button class="button" color="primary" mat-button [matMenuTriggerFor]="categories" style="margin-left: 20px;margin-right: 20px">
+      <mat-icon color="primary" style="margin-right: 4px">apps</mat-icon>Core Practice Area</button>
+
+    <span class="example-fill-remaining-space">
+      <input type="text" placeholder="Search here" class="form-control" style="font-weight: 120;min-width: 300px;padding-top: 4px;padding-bottom: 4px;">
+    </span>
+    <span style="margin-left:12px;margin-right: 12px">
+      <button class="button" color="primary" mat-button routerLink="/about-us">About Us</button>
+      <button class="button" color="primary" mat-button routerLink="/signup">Login/Signup</button>
+
+      <mat-menu #categories="matMenu">
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item [matMenuTriggerFor]="subcategories">CRIMINAL</button>
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item [matMenuTriggerFor]="subcategories1">CIVIL</button>
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item [matMenuTriggerFor]="subcategories2">PROPERTY DISPUTE</button>
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item [matMenuTriggerFor]="subcategories3">IMMIGRATION</button>
+      </mat-menu>
+
+      <mat-menu #subcategories="matMenu">
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item>Sub Category 1</button>
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item>Sub Category 2</button>
+      </mat-menu>
+
+      <mat-menu #subcategories1="matMenu">
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item>Sub Category 1</button>
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item>Sub Category 2</button>
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item>Sub Category 3</button>
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item>Sub Category 4</button>
+      </mat-menu>
+
+      <mat-menu #subcategories2="matMenu">
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item>Sub Category 1</button>
+      </mat-menu>
+
+      <mat-menu #subcategories3="matMenu">
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item>Sub Category 1</button>
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item>Sub Category 2</button>
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item>Sub Category 3</button>
+      </mat-menu>
+    </span>
+  </mat-toolbar>
+</div>

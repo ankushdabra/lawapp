@@ -14,7 +14,9 @@ import {
   MatGridListModule,
   MatSelectModule,
   MatInputModule,
-  MatDividerModule
+  MatDividerModule,
+  MatFormFieldModule,
+  MatAutocompleteModule
 } from '@angular/material';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -29,10 +31,12 @@ import { LawyerItemComponent } from './lawyer/lawyer-item/lawyer-item.component'
 import { HeaderComponent } from './header/header.component';
 import { SignupComponent } from './signup/signup.component';
 import { CorePracticeItemComponent } from './core-practice-item/core-practice-item.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 const appRoutes: Routes = [
   { path: '', component: ServicesComponent },
-  { path: 'signup', component: SignupComponent}
+  { path: 'signup', component: SignupComponent},
+  { path: 'about-us', component: AboutUsComponent},
 ];
 
 @NgModule({
@@ -45,7 +49,8 @@ const appRoutes: Routes = [
     LawyerItemComponent,
     HeaderComponent,
     SignupComponent,
-    CorePracticeItemComponent
+    CorePracticeItemComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
@@ -63,6 +68,8 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     MatInputModule,
     MatDividerModule,
+    MatFormFieldModule,
+    MatAutocompleteModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
