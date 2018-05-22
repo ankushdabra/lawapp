@@ -9,9 +9,10 @@
     <span class="example-fill-remaining-space">
       <input type="text" placeholder="Search here" class="form-control" style="font-weight: 120;min-width: 300px;padding-top: 4px;padding-bottom: 4px;">
     </span>
+
     <span style="margin-left:12px;margin-right: 12px">
       <button class="button" color="primary" mat-button routerLink="/about-us">About Us</button>
-      <button class="button" color="primary" mat-button routerLink="/signup">Login/Signup</button>
+      <button class="button" color="primary"  mat-button (click)="openDialog()">Login/Signup</button>
 
       <mat-menu #categories="matMenu">
         <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item [matMenuTriggerFor]="subcategories">CRIMINAL</button>

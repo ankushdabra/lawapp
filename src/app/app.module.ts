@@ -16,7 +16,8 @@ import {
   MatInputModule,
   MatDividerModule,
   MatFormFieldModule,
-  MatAutocompleteModule
+  MatAutocompleteModule,
+  MatDialogModule
 } from '@angular/material';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,17 +26,15 @@ import { AppComponent } from './app.component';
 
 import { LawyerListComponent } from './lawyer/lawyer-list/lawyer-list.component';
 import { LawyerDetailsComponent } from './lawyer/lawyer-details/lawyer-details.component';
-import { ConsumerComponent } from './consumer/consumer.component';
 import { ServicesComponent } from './services/services.component';
 import { LawyerItemComponent } from './lawyer/lawyer-item/lawyer-item.component';
 import { HeaderComponent } from './header/header.component';
-import { SignupComponent } from './signup/signup.component';
 import { CorePracticeItemComponent } from './core-practice-item/core-practice-item.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { AuthenticationDialogComponent } from './authentication-dialog/authentication-dialog.component';
 
 const appRoutes: Routes = [
   { path: '', component: ServicesComponent },
-  { path: 'signup', component: SignupComponent},
   { path: 'about-us', component: AboutUsComponent},
 ];
 
@@ -44,13 +43,12 @@ const appRoutes: Routes = [
     AppComponent,
     LawyerListComponent,
     LawyerDetailsComponent,
-    ConsumerComponent,
     ServicesComponent,
     LawyerItemComponent,
     HeaderComponent,
-    SignupComponent,
     CorePracticeItemComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    AuthenticationDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -70,9 +68,11 @@ const appRoutes: Routes = [
     MatDividerModule,
     MatFormFieldModule,
     MatAutocompleteModule,
+    MatDialogModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [AuthenticationDialogComponent]
 })
 export class AppModule {}
