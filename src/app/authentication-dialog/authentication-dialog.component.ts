@@ -8,6 +8,9 @@ import { inject } from '@angular/core/src/render3';
   styleUrls: ['./authentication-dialog.component.css']
 })
 export class AuthenticationDialogComponent implements OnInit {
+
+  hide = true;
+
   constructor(
     matDialogRef: MatDialogRef<AuthenticationDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
