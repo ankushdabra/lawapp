@@ -4,7 +4,7 @@ import { FormControl } from '@angular/forms';
 import { map, startWith } from 'rxjs/operators';
 import { Observable } from 'rxjs/Observable';
 import { MatDialog } from '@angular/material';
-import { AuthenticationDialogComponent } from '../authentication-dialog/authentication-dialog.component';
+import { AuthenticationDialogComponent } from '../dialogs/authentication-dialog/authentication-dialog.component';
 
 @Component({
   selector: 'app-header',
