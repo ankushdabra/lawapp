@@ -1,87 +1,47 @@
-<!-- <div class="fixed-header">
-    <mat-toolbar color="warn" flex="50" fxLayout="row" fxLayoutAlign="start center" class="mat-elevation-z2">
-      <img type="image/x-icon" src="favicon.ico" style="margin: 12px" />
-      <span style="color: white;font-size: 1em">Law App</span>
-      <span class="example-fill-remaining-space"></span>
-      <span style="margin-left:12px;margin-right: 12px">
-        <button color="primary" mat-button routerLink="/">SERVICES</button>
-        <button color="primary" mat-button routerLink="/">FAQ</button>
-        <button color="primary" mat-button routerLink="/signup">LOGIN/SIGNUP</button>
-        <button mat-icon-button [matMenuTriggerFor]="menu">
-          <mat-icon color="primary">menu</mat-icon>
-        </button>
-        <mat-menu style="background-color: #101010;" #menu="matMenu" >
-          <button mat-menu-item  *ngFor="let link of arraySideNav">{{link}}</button>
-        </mat-menu>
-      </span>
-    </mat-toolbar>
-  </div> -->
-
 <div class="fixed-header">
   <mat-toolbar color="warn" flex="50" fxLayout="row" fxLayoutAlign="start center" class="mat-elevation-z2">
     <img type="image/x-icon" src="favicon.ico" style="margin: 12px" />
     <span style="color: white;font-size: 1em">Law App</span>
-    <button color="primary" mat-button [matMenuTriggerFor]="animals" style="margin-left:20px;margin-right: 20px">
-      <mat-icon>assignment</mat-icon>Categories</button>
 
-    <span class="example-fill-remaining-space"></span>
+    <button class="button" color="primary" mat-button [matMenuTriggerFor]="categories" style="margin-left: 20px;margin-right: 20px">
+      <mat-icon color="primary" style="margin-right: 4px">apps</mat-icon>Core Practice Area</button>
+
+    <span class="example-fill-remaining-space">
+      <input type="text" placeholder="Search here" class="form-control" style="font-weight: 120;min-width: 300px;padding-top: 4px;padding-bottom: 4px;">
+    </span>
+
     <span style="margin-left:12px;margin-right: 12px">
-      <button color="primary" mat-button routerLink="/">SERVICES</button>
-      <button color="primary" mat-button routerLink="/">FAQ</button>
-      <button color="primary" mat-button routerLink="/signup">LOGIN/SIGNUP</button>
-      <button mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon color="primary">menu</mat-icon>
-      </button>
-      <mat-menu style="background-color: #101010;" #menu="matMenu">
-        <button mat-menu-item *ngFor="let link of arraySideNav">{{link}}</button>
+      <button class="button" color="primary" mat-button routerLink="/about-us">About Us</button>
+      <button class="button" color="primary"  mat-button (click)="openDialog()">Login/Signup</button>
+
+      <mat-menu #categories="matMenu">
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item [matMenuTriggerFor]="subcategories">CRIMINAL</button>
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item [matMenuTriggerFor]="subcategories1">CIVIL</button>
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item [matMenuTriggerFor]="subcategories2">PROPERTY DISPUTE</button>
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item [matMenuTriggerFor]="subcategories3">IMMIGRATION</button>
       </mat-menu>
 
-      <mat-menu #animals="matMenu">
-        <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
-        <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+      <mat-menu #subcategories="matMenu">
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item>Sub Category 1</button>
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item>Sub Category 2</button>
       </mat-menu>
 
-      <mat-menu #vertebrates="matMenu">
-        <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
-        <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
-        <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
-        <button mat-menu-item>Birds</button>
-        <button mat-menu-item>Mammals</button>
+      <mat-menu #subcategories1="matMenu">
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item>Sub Category 1</button>
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item>Sub Category 2</button>
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item>Sub Category 3</button>
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item>Sub Category 4</button>
       </mat-menu>
 
-      <mat-menu #invertebrates="matMenu">
-        <button mat-menu-item>Insects</button>
-        <button mat-menu-item>Molluscs</button>
-        <button mat-menu-item>Crustaceans</button>
-        <button mat-menu-item>Corals</button>
-        <button mat-menu-item>Arachnids</button>
-        <button mat-menu-item>Velvet worms</button>
-        <button mat-menu-item>Horseshoe crabs</button>
+      <mat-menu #subcategories2="matMenu">
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item>Sub Category 1</button>
       </mat-menu>
 
-      <mat-menu #fish="matMenu">
-        <button mat-menu-item>Baikal oilfish</button>
-        <button mat-menu-item>Bala shark</button>
-        <button mat-menu-item>Ballan wrasse</button>
-        <button mat-menu-item>Bamboo shark</button>
-        <button mat-menu-item>Banded killifish</button>
+      <mat-menu #subcategories3="matMenu">
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item>Sub Category 1</button>
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item>Sub Category 2</button>
+        <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item>Sub Category 3</button>
       </mat-menu>
-
-      <mat-menu #amphibians="matMenu">
-        <button mat-menu-item>Sonoran desert toad</button>
-        <button mat-menu-item>Western toad</button>
-        <button mat-menu-item>Arroyo toad</button>
-        <button mat-menu-item>Yosemite toad</button>
-      </mat-menu>
-
-      <mat-menu #reptiles="matMenu">
-        <button mat-menu-item>Banded Day Gecko</button>
-        <button mat-menu-item>Banded Gila Monster</button>
-        <button mat-menu-item>Black Tree Monitor</button>
-        <button mat-menu-item>Blue Spiny Lizard</button>
-        <button mat-menu-item disabled>Velociraptor</button>
-      </mat-menu>
-
     </span>
   </mat-toolbar>
 </div>

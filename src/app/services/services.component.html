@@ -1,32 +1,38 @@
-<div class="banner-image">
-  <div class="banner-text">
-    <p style="font-size: 1.8em;font-weight: 100">Get Legal Advice From Experts</p>
-    <h3 style="font-size: 3.5em;font-weight: 100">Where Law and Business Meet</h3>
+
+
+
+<!-- <div class="container" style="padding: 10px;">
+  <div style="padding-top: 20px;padding-left: 24px;padding-right: 40px">
+    <h2 style="width:100%;text-align: left;color: black">CORE PRACTICE AREAS</h2>
+    <mat-divider style="width: 100%;margin-bottom: 20px"></mat-divider>
   </div>
-</div>
-
-<div style="background-color: #404040;align-content: center;">
-  <div class="container">
-    <div style="padding-top: 20px;">
-      <h2 style="width:100%;text-align: left;color: white">CORE PRACTICE AREAS</h2>
-    </div>
-    <mat-divider style="background-color: white;width: 100%;margin-bottom: 20px"></mat-divider>
-
-    <div class="grid-container">
-      <div *ngFor="let i of corePracticeArray">
-        <app-core-practice-item [item]=i></app-core-practice-item>
-      </div>
-    </div>
-
-    <div style="padding-top: 20px;">
-      <h2 style="width:100%;text-align: left;color: white">OUR SERVICES</h2>
-    </div>
-    <mat-divider style="background-color: white;width: 100%;margin-bottom: 20px"></mat-divider>
-    <div class="grid-container">
-      <div *ngFor="let i of coreServicesArray">
-        <app-core-practice-item [item]=i></app-core-practice-item>
-      </div>
+  <div class="grid-container">
+    <div *ngFor="let i of corePracticeArray">
+      <app-core-practice-item [item]=i></app-core-practice-item>
     </div>
   </div>
-</div>
+</div> -->
 
+
+
+
+<!-- <div style="padding-top: 20px;margin-left: 120px;margin-right: 140px">
+  <h2 style="width:100%;text-align: left;color: black">OUR SERVICES</h2>
+  <mat-divider style="background-color: white;width: 100%;margin-bottom: 20px"></mat-divider>
+</div>
+<div class="container" style="padding: 10px;">
+  <div class="grid-container">
+    <div *ngFor="let i of coreServicesArray">
+      <app-core-practice-item [item]=i></app-core-practice-item>
+    </div>
+  </div>
+</div> -->
+
+<div style="padding-top: 100px;margin-left: 120px;margin-right: 140px">
+  <h2 style="width:100%;text-align: left;color: white">RECOMMENDED LAWYERS</h2>
+  <mat-divider style="background-color: white;width: 100%;margin-bottom: 20px"></mat-divider>
+</div>
+<div class="container" style="padding: 10px;">
+
+  <app-lawyer-list></app-lawyer-list>
+</div>

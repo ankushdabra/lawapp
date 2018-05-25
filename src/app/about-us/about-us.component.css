@@ -1,0 +1,7 @@
+.image-about {
+  background-image: url('/assets/home1-1.jpg');
+  height: 100%;
+  width: 80%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

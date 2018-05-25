@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LawyerListModel } from '../lawyer/lawyer-list/lawyer-list.model';
 
-
 @Component({
   selector: 'app-services',
   templateUrl: './services.component.html',
@@ -14,6 +13,24 @@ export class ServicesComponent implements OnInit {
   coreServicesArray: LawyerListModel[] = [
     new LawyerListModel(
       'TALK TO LAWYER',
+      '',
+      '',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    ),
+    new LawyerListModel(
+      'FIND ANSWERS',
+      '',
+      '',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    ),
+    new LawyerListModel(
+      'NEWS',
+      '',
+      '',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    ),
+    new LawyerListModel(
+      'ARTICLES',
       '',
       '',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
