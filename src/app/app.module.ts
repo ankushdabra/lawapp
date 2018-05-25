@@ -1,7 +1,7 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import {
   MatButtonModule,
@@ -20,24 +20,24 @@ import {
   MatDialogModule,
   MatRadioModule,
   MatSlideToggleModule
-} from "@angular/material";
+} from '@angular/material';
 
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AppComponent } from "./app.component";
+import { AppComponent } from './app.component';
 
-import { LawyerListComponent } from "./lawyer/lawyer-list/lawyer-list.component";
-import { LawyerDetailsComponent } from "./lawyer/lawyer-details/lawyer-details.component";
-import { ServicesComponent } from "./services/services.component";
-import { LawyerItemComponent } from "./lawyer/lawyer-item/lawyer-item.component";
-import { HeaderComponent } from "./header/header.component";
-import { CorePracticeItemComponent } from "./core-practice-item/core-practice-item.component";
-import { AboutUsComponent } from "./about-us/about-us.component";
-import { AuthenticationDialogComponent } from "./dialogs/authentication-dialog/authentication-dialog.component";
+import { LawyerListComponent } from './lawyer/lawyer-list/lawyer-list.component';
+import { LawyerDetailsComponent } from './lawyer/lawyer-details/lawyer-details.component';
+import { ServicesComponent } from './services/services.component';
+import { LawyerItemComponent } from './lawyer/lawyer-item/lawyer-item.component';
+import { HeaderComponent } from './header/header.component';
+import { CorePracticeItemComponent } from './core-practice-item/core-practice-item.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { LoginDialogComponent } from './dialogs/login-dialog/login-dialog.component';
 
 const appRoutes: Routes = [
-  { path: "", component: ServicesComponent },
-  { path: "about-us", component: AboutUsComponent }
+  { path: '', component: ServicesComponent },
+  { path: 'about-us', component: AboutUsComponent }
 ];
 
 @NgModule({
@@ -50,7 +50,7 @@ const appRoutes: Routes = [
     HeaderComponent,
     CorePracticeItemComponent,
     AboutUsComponent,
-    AuthenticationDialogComponent
+    LoginDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -77,6 +77,6 @@ const appRoutes: Routes = [
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [AuthenticationDialogComponent]
+  entryComponents: [LoginDialogComponent]
 })
 export class AppModule {}

@@ -4,7 +4,7 @@ import { FormControl } from '@angular/forms';
 import { map, startWith } from 'rxjs/operators';
 import { Observable } from 'rxjs/Observable';
 import { MatDialog } from '@angular/material';
-import { AuthenticationDialogComponent } from '../dialogs/authentication-dialog/authentication-dialog.component';
+import { LoginDialogComponent } from '../dialogs/login-dialog/login-dialog.component';
 
 @Component({
   selector: 'app-header',
@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {}
 
   public openDialog() {
-    this.dialog.open(AuthenticationDialogComponent, {
+    this.dialog.open(LoginDialogComponent, {
       data: { name: 'Angular' }
     });
   }

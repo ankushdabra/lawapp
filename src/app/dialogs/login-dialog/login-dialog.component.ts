@@ -3,16 +3,16 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { inject } from '@angular/core/src/render3';
 
 @Component({
-  selector: 'app-authentication-dialog',
-  templateUrl: './authentication-dialog.component.html',
-  styleUrls: ['./authentication-dialog.component.css']
+  selector: 'app-login-dialog',
+  templateUrl: './login-dialog.component.html',
+  styleUrls: ['./login-dialog.component.css']
 })
-export class AuthenticationDialogComponent implements OnInit {
+export class LoginDialogComponent implements OnInit {
 
   hide = true;
 
   constructor(
-    matDialogRef: MatDialogRef<AuthenticationDialogComponent>,
+    matDialogRef: MatDialogRef<LoginDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {}
 
