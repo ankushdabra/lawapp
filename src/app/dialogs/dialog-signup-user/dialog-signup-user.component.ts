@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-dialog-signup-user',
@@ -7,11 +8,20 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./dialog-signup-user.component.css']
 })
 export class DialogSignupUserComponent implements OnInit {
-  options = 2;
+  signupForm: FormGroup;
+  option = 1;
 
-  constructor(private matSignupDialogRef: MatDialogRef<DialogSignupUserComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any) { }
+  constructor(
+    private matSignupDialogRef: MatDialogRef<DialogSignupUserComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any
+  ) {}
 
   ngOnInit() {
+    this.signupForm = new FormGroup({
+      email: new FormControl(null),
+      userName: new FormControl(null),
+      rgoptions: new FormControl(this.option),
+      registrationNumber: new FormControl(null)
+    });
   }
 }

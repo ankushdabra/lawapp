@@ -9,8 +9,7 @@ import { DialogSignupUserComponent } from '../dialog-signup-user/dialog-signup-u
   styleUrls: ['./login-dialog.component.css']
 })
 export class LoginDialogComponent implements OnInit {
-  hide = true;
-
+  options = 1;
   constructor(
     private dialogSignup: MatDialog,
     private matDialogRef: MatDialogRef<LoginDialogComponent>,

@@ -4,14 +4,14 @@
   </mat-form-field>
   <br>
   <mat-form-field style="width: 100%">
-    <input matInput type="password" placeholder="Password" [type]="hide ? 'password' : 'text'">
+    <input matInput type="password" placeholder="Password">
   </mat-form-field>
 
-  <mat-radio-group >
-    <mat-radio-button color="primary" style="margin-right: 20px;" value="1">
+  <mat-radio-group [(ngModel)]="options">
+    <mat-radio-button color="primary" style="margin-right: 20px;" [value]="1">
       <p style="font-weight: 50;font-size: 1em;font-style: normal;margin-top: 12px">Consumer</p>
     </mat-radio-button>
-    <mat-radio-button color="primary" value="2">
+    <mat-radio-button color="primary" [value]="2">
       <p style="font-weight: 50;font-size: 1em;font-style: normal;margin-top: 12px">Lawyer</p>
     </mat-radio-button>
   </mat-radio-group>
