@@ -1,40 +1,63 @@
 <div class="container-fluid" style="width: 320px">
-  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
 
-    <mat-form-field style="width: 100%">
-      <input matInput type="text" placeholder="Full Name" ngModel name="name">
-    </mat-form-field>
-    <mat-form-field style="width: 100%">
-      <input matInput type="email" placeholder="Email Address" ngModel name="email" required email #email="ngModel">
-    </mat-form-field>
-    <span class="help-block" *ngIf="!email.valid">Please enter valid email!</span>
-    <mat-form-field style="width: 100%">
-      <input matInput type="tel" placeholder="Mobile number" ngModel name="mobile">
+    <mat-form-field style="width: 100%;font-weight: 200">
+      <input matInput id="userName" formControlName="userName" type="text" placeholder="Full Name">
+      <mat-error *ngIf="!signupForm.get('userName').valid && signupForm.get('userName').touched">
+        <strong>Please enter valid name.</strong>
+      </mat-error>
     </mat-form-field>
 
-    <mat-radio-group [ngModel]="1">
+    <mat-form-field style="width: 100%;font-weight: 200">
+      <input matInput id="email" formControlName="email" type="email" placeholder="Email Address">
+      <mat-error *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched">
+        <strong>Please enter valid email.</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%;font-weight: 200">
+      <span matPrefix>+91 &nbsp;</span>
+      <input matInput id="mobileNumber" formControlName="mobileNumber" maxlength="10" type="tel" placeholder="Mobile number">
+      <mat-error *ngIf="!signupForm.get('mobileNumber').valid && signupForm.get('mobileNumber').touched">
+        <strong>Please enter valid mobile number.</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-radio-group formControlName="rgoptions" [(ngModel)]="option">
+
       <mat-radio-button color="primary" style="margin-right: 20px;" [value]="1">
         <p style="font-weight: 50;font-size: 1em;font-style: normal;margin-top: 12px">Consumer</p>
       </mat-radio-button>
       <mat-radio-button color="primary" [value]="2">
         <p style="font-weight: 50;font-size: 1em;font-style: normal;margin-top: 12px">Lawyer</p>
       </mat-radio-button>
+
     </mat-radio-group>
 
-    <div *ngIf="options==2">
-      <mat-form-field style="width: 100%">
-        <input matInput type="text" placeholder="Registration Number" ngModel name="registrationNumber">
+    <div *ngIf="option==2">
+      <mat-form-field style="width: 100%;font-weight: 200">
+        <input matInput id="registrationNumber" formControlName="registrationNumber" type="text" placeholder="Registration number">
+        <mat-error *ngIf="!signupForm.get('registrationNumber').valid && signupForm.get('registrationNumber').touched">
+          <strong>Please enter valid registration number.</strong>
+        </mat-error>
       </mat-form-field>
     </div>
 
-    <mat-form-field style="width: 100%">
-      <input matInput type="password" placeholder="Password" ngModel name="password">
+    <mat-form-field style="width: 100%;font-weight: 200">
+      <input matInput id="password" formControlName="password" type="password" placeholder="Password">
+      <mat-error *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched">
+          <strong>Password must be alphanumeric with atleast 1 special character</strong>
+      </mat-error>
     </mat-form-field>
-    <mat-form-field style="width: 100%">
-      <input matInput type="password" placeholder="Confirm Password" ngModel name="confirmPassword">
-    </mat-form-field>
-    <button mat-raised-button id="btn_signup" type="submit" style="background-color: darkcyan;color: white ;font-size:1em;font-weight: 300;width: 100%;margin-top: 12px"
-      href="#" [disabled]="!f.valid">Signup</button>
-  </form>
 
+    <mat-form-field style="width: 100%;font-weight: 200">
+      <input matInput id="confirmPassword" formControlName="confirmPassword" type="password" placeholder="Confirm Password">
+      <mat-error *ngIf="!signupForm.get('confirmPassword').valid && signupForm.get('confirmPassword').touched">
+        <strong>Please enter valid password.</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button id="btn_signup" style="background-color: darkcyan;color: white ;font-size:1em;font-weight: 300;width: 100%;margin-top: 12px"
+      href="#">Signup</button>
+  </form>
 </div>

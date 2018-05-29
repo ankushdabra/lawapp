@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { NgForm } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-dialog-signup-user',
@@ -8,16 +8,37 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./dialog-signup-user.component.css']
 })
 export class DialogSignupUserComponent implements OnInit {
-   options = 2;
+  signupForm: FormGroup;
+  option = 1;
+  pwdPattern = '(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}';
+  mobnumPattern = '^((\\+91-?)|0)?[0-9]{10}$';
 
   constructor(
     private matSignupDialogRef: MatDialogRef<DialogSignupUserComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.signupForm = new FormGroup({
+      userName: new FormControl(null, [
+        Validators.required,
+        Validators.minLength(1),
+        Validators.maxLength(128)
+      ]),
+      email: new FormControl(null, [Validators.required, Validators.email]),
+      mobileNumber: new FormControl(null, [
+        Validators.required,
+        Validators.minLength(10),
+        Validators.maxLength(10),
+      ]),
+      rgoptions: new FormControl(this.option, Validators.required),
+      registrationNumber: new FormControl(null, Validators.required),
+      password: new FormControl(null, [Validators.required, Validators.pattern(this.pwdPattern)]),
+      confirmPassword: new FormControl(null, [Validators.required, Validators.pattern(this.pwdPattern)])
+    });
+  }
 
-  public onSubmit(form: NgForm) {
-    console.log(form);
+  onSubmit() {
+    console.log(this.signupForm);
   }
 }

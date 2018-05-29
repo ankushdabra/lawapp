@@ -10,8 +10,7 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./login-dialog.component.css']
 })
 export class LoginDialogComponent implements OnInit {
-
-  emailValidation: FormControl;
+  options = 1;
   constructor(
     private dialogSignup: MatDialog,
     private matDialogRef: MatDialogRef<LoginDialogComponent>,
@@ -19,7 +18,6 @@ export class LoginDialogComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.emailValidation = new FormControl('', Validators.required);
   }
 
   public closeLoginDialog() {
