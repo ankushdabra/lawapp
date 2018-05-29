@@ -2,6 +2,7 @@ import { Component, OnInit, Inject, ViewEncapsulation } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA, MatDialog } from '@angular/material';
 import { inject } from '@angular/core/src/render3';
 import { DialogSignupUserComponent } from '../dialog-signup-user/dialog-signup-user.component';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login-dialog',
@@ -9,15 +10,17 @@ import { DialogSignupUserComponent } from '../dialog-signup-user/dialog-signup-u
   styleUrls: ['./login-dialog.component.css']
 })
 export class LoginDialogComponent implements OnInit {
-  hide = true;
 
+  emailValidation: FormControl;
   constructor(
     private dialogSignup: MatDialog,
     private matDialogRef: MatDialogRef<LoginDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.emailValidation = new FormControl('', Validators.required);
+  }
 
   public closeLoginDialog() {
     this.matDialogRef.close();

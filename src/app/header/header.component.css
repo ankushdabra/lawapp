@@ -10,5 +10,6 @@
   position: -webkit-fixed; /* For macOS/iOS Safari */
   top: 0; /* Sets the sticky toolbar to be on top */
   width: 100%;
+  background: black;
   z-index: 1000;
 }

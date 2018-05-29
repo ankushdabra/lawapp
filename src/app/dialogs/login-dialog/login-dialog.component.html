@@ -1,13 +1,14 @@
 <div class="container-fluid" style="width: 320px">
+<form>
   <mat-form-field style="width: 100%">
-    <input matInput type="text" placeholder="Email/Mobile no">
+    <input matInput type="text" placeholder="Email/Mobile no" formControlName="emailValidation">
   </mat-form-field>
   <br>
   <mat-form-field style="width: 100%">
-    <input matInput type="password" placeholder="Password" [type]="hide ? 'password' : 'text'">
+    <input matInput type="password" placeholder="Password">
   </mat-form-field>
 
-  <mat-radio-group >
+  <mat-radio-group>
     <mat-radio-button color="primary" style="margin-right: 20px;" value="1">
       <p style="font-weight: 50;font-size: 1em;font-style: normal;margin-top: 12px">Consumer</p>
     </mat-radio-button>
@@ -33,8 +34,9 @@
   <button mat-raised-button style="background-color: #3b5998;color: white ;font-size:1em;font-weight: 300;width: 100%;" href="#">Login with Facebook</button>
   <button mat-raised-button style="background-color: #dd4b39;color: white ;font-size:1em;font-weight: 300;width: 100%;margin-top: 12px;"
     href="#">Login with Google</button>
+</form>
 
-  <div style=" margin-top: 8px;align-items: center" >
+  <div style=" margin-top: 8px;align-items: center">
     <label style="font-weight: 50;font-size: 1em;font-style: normal">New user?</label>
     <a href="javascript:void(0);" (click)="openSignupDialog()">
       <u>Register here</u>
