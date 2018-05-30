@@ -10,7 +10,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class DialogSignupUserComponent implements OnInit {
   signupForm: FormGroup;
   option = 1;
-  pwdPattern = '(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}';
+  password: String;
+  confirmPassword: String;
+  pwdPattern = '(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-zd$@$!%*?&].{8,}';
   mobnumPattern = '^((\\+91-?)|0)?[0-9]{10}$';
 
   constructor(
@@ -29,12 +31,20 @@ export class DialogSignupUserComponent implements OnInit {
       mobileNumber: new FormControl(null, [
         Validators.required,
         Validators.minLength(10),
-        Validators.maxLength(10),
+        Validators.maxLength(10)
       ]),
       rgoptions: new FormControl(this.option, Validators.required),
       registrationNumber: new FormControl(null, Validators.required),
-      password: new FormControl(null, [Validators.required, Validators.pattern(this.pwdPattern)]),
-      confirmPassword: new FormControl(null, [Validators.required, Validators.pattern(this.pwdPattern)])
+      courtName: new FormControl(null, Validators.required),
+      chambernumber: new FormControl(null, Validators.required),
+      password: new FormControl(null, [
+        Validators.required,
+        Validators.pattern(this.pwdPattern)
+      ]),
+      confirmPassword: new FormControl(null, [
+        Validators.required,
+        Validators.pattern(this.pwdPattern)
+      ])
     });
   }
 

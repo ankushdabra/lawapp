@@ -1,40 +1,47 @@
 <div class="container-fluid" style="width: 320px">
-<form>
-  <mat-form-field style="width: 100%">
-    <input matInput type="text" placeholder="Email/Mobile no" formControlName="emailValidation">
-  </mat-form-field>
-  <br>
-  <mat-form-field style="width: 100%">
-    <input matInput type="password" placeholder="Password">
-  </mat-form-field>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
-  <mat-radio-group [(ngModel)]="options">
-    <mat-radio-button color="primary" style="margin-right: 20px;" [value]="1">
-      <p style="font-weight: 50;font-size: 1em;font-style: normal;margin-top: 12px">Consumer</p>
-    </mat-radio-button>
-    <mat-radio-button color="primary" [value]="2">
-      <p style="font-weight: 50;font-size: 1em;font-style: normal;margin-top: 12px">Lawyer</p>
-    </mat-radio-button>
-  </mat-radio-group>
+    <mat-form-field style="width: 100%;font-weight: 200">
+      <input matInput id="email" formControlName="email" type="email" placeholder="Email Address">
+      <mat-error *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched">
+        <strong>Please enter valid email.</strong>
+      </mat-error>
+    </mat-form-field>
 
-  <button mat-raised-button style="background-color: darkcyan;color: white ;font-size:1em;font-weight: 300;width: 100%;margin-top: 12px"
-    href="#">Login</button>
+    <mat-form-field style="width: 100%;font-weight: 200">
+      <input matInput id="password" formControlName="password" type="password" placeholder="Password">
+      <mat-error *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched">
+        <strong>Password must be alphanumeric with atleast 1 special character</strong>
+      </mat-error>
+    </mat-form-field>
 
-  <div class="row" style=" margin-top: 16px;margin-bottom: 6px">
-    <div class="col-md-5">
-      <mat-divider style="margin-top: 8px"></mat-divider>
+    <mat-radio-group [(ngModel)]="options">
+      <mat-radio-button color="primary" style="margin-right: 20px;" [value]="1">
+        <p style="font-weight: 50;font-size: 1em;font-style: normal;margin-top: 12px">Consumer</p>
+      </mat-radio-button>
+      <mat-radio-button color="primary" [value]="2">
+        <p style="font-weight: 50;font-size: 1em;font-style: normal;margin-top: 12px">Lawyer</p>
+      </mat-radio-button>
+    </mat-radio-group>
+
+    <button mat-raised-button style="background-color: darkcyan;color: white ;font-size:1em;font-weight: 300;width: 100%;margin-top: 12px"
+      href="#">Login</button>
+
+    <div class="row" style=" margin-top: 16px;margin-bottom: 6px;">
+      <div class="col-md-5">
+        <mat-divider style="margin-top: 8px"></mat-divider>
+      </div>
+      <div class="col-md-2">
+        <p style="font-weight: 50;font-size: 1em;font-style: normal;">Or</p>
+      </div>
+      <div class="col-md-5">
+        <mat-divider style="margin-top: 8px"></mat-divider>
+      </div>
     </div>
-    <div class="col-md-2">
-      <p style="font-weight: 50;font-size: 1em;font-style: normal;">Or</p>
-    </div>
-    <div class="col-md-5">
-      <mat-divider style="margin-top: 8px"></mat-divider>
-    </div>
-  </div>
-  <button mat-raised-button style="background-color: #3b5998;color: white ;font-size:1em;font-weight: 300;width: 100%;" href="#">Login with Facebook</button>
-  <button mat-raised-button style="background-color: #dd4b39;color: white ;font-size:1em;font-weight: 300;width: 100%;margin-top: 12px;"
-    href="#">Login with Google</button>
-</form>
+    <button mat-raised-button style="background-color: #3b5998;color: white ;font-size:1em;font-weight: 300;width: 100%;" href="#">Login with Facebook</button>
+    <button mat-raised-button style="background-color: #dd4b39;color: white ;font-size:1em;font-weight: 300;width: 100%;margin-top: 12px;"
+      href="#">Login with Google</button>
+  </form>
 
   <div style=" margin-top: 8px;align-items: center">
     <label style="font-weight: 50;font-size: 1em;font-style: normal">New user?</label>

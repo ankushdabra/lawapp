@@ -35,6 +35,7 @@ import { CorePracticeItemComponent } from './core-practice-item/core-practice-it
 import { AboutUsComponent } from './about-us/about-us.component';
 import { LoginDialogComponent } from './dialogs/login-dialog/login-dialog.component';
 import { DialogSignupUserComponent } from './dialogs/dialog-signup-user/dialog-signup-user.component';
+import { MatcherDirective } from './directives/matcher.directive';
 
 const appRoutes: Routes = [
   { path: '', component: ServicesComponent },
@@ -53,6 +54,7 @@ const appRoutes: Routes = [
     AboutUsComponent,
     LoginDialogComponent,
     DialogSignupUserComponent,
+    MatcherDirective,
   ],
   imports: [
     BrowserModule,
