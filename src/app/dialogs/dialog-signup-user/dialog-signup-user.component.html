@@ -1,5 +1,5 @@
 <div class="container-fluid" style="width: 320px">
-  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="signupForm"  (ngSubmit)="onSubmit()">
 
     <mat-form-field style="width: 100%;font-weight: 200">
       <input matInput id="userName" formControlName="userName" type="text" placeholder="Full Name">
@@ -23,7 +23,7 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-radio-group formControlName="rgoptions" [(ngModel)]="option">
+    <mat-radio-group formControlName="rgoptions" [(ngModel)]="option" >
       <mat-radio-button color="primary" style="margin-right: 20px;" [value]="1">
         <p style="font-weight: 50;font-size: 1em;font-style: normal;margin-top: 12px">Consumer</p>
       </mat-radio-button>
@@ -32,46 +32,42 @@
       </mat-radio-button>
     </mat-radio-group>
 
-    <div *ngIf="option==2">
-      <mat-form-field style="width: 100%;font-weight: 200">
+      <mat-form-field style="width: 100%;font-weight: 200" *ngIf="option==2">
         <input matInput id="registrationNumber" formControlName="registrationNumber" type="text" placeholder="Registration number">
         <mat-error *ngIf="option==2 && !signupForm.get('registrationNumber').valid && signupForm.get('registrationNumber').touched">
           <strong>Please enter valid registration number.</strong>
         </mat-error>
       </mat-form-field>
 
-      <!-- <mat-form-field style="width: 100%;font-weight: 200">
+      <mat-form-field  style="width: 100%;font-weight: 200" *ngIf="option==2">
         <input matInput id="courtName" formControlName="courtName" type="text" placeholder="Court name">
-        <mat-error *ngIf="!signupForm.get('courtName').valid && signupForm.get('courtName').touched">
-          <strong>Please enter valid registration .</strong>
+        <mat-error *ngIf="option==2 && !signupForm.get('courtName').valid && signupForm.get('courtName').touched">
+          <strong>Please enter court name</strong>
         </mat-error>
       </mat-form-field>
 
-      <mat-form-field style="width: 100%;font-weight: 200">
+      <mat-form-field style="width: 100%;font-weight: 200" *ngIf="option==2">
         <input matInput id="chamberNumber" formControlName="chamberNumber" type="text" placeholder="Chamber number">
-        <mat-error *ngIf="!signupForm.get('chamberNumber').valid && signupForm.get('chamberNumber').touched">
-          <strong>Please enter valid registration number</strong>
+        <mat-error *ngIf="option==2 && !signupForm.get('chamberNumber').valid && signupForm.get('chamberNumber').touched">
+          <strong>Please enter chamber number</strong>
         </mat-error>
-      </mat-form-field> -->
-    </div>
+      </mat-form-field>
 
     <mat-form-field style="width: 100%;font-weight: 200">
-      <input matInput id="password" formControlName="password" type="password" placeholder="Password" [ngModel]="password">
+      <input matInput id="password" formControlName="password" type="password" placeholder="Password" >
       <mat-error *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched">
         <strong>Password must be alphanumeric with atleast 1 special character</strong>
       </mat-error>
-      <mat-error *ngIf="!signupForm.get('password')">
-        <strong>Password must be alphanumeric with atleast 1 special character</strong>
-      </mat-error>
-    </mat-form-field>
+      </mat-form-field>
 
     <mat-form-field style="width: 100%;font-weight: 200">
-      <input matInput id="confirmPassword" formControlName="confirmPassword" type="password" placeholder="Confirm Password" [ngModel]="confirmPassword"
+      <input matInput id="confirmPassword" formControlName="confirmPassword" type="password" placeholder="Confirm Password"
         required appMatcher="password">
       <mat-error *ngIf="!signupForm.get('confirmPassword').valid ">
         <strong> Password mismatch
         </strong>
       </mat-error>
+
     </mat-form-field>
 
     <button mat-raised-button id="btn_signup" style="background-color: darkcyan;color: white ;font-size:1em;font-weight: 300;width: 100%;margin-top: 12px"

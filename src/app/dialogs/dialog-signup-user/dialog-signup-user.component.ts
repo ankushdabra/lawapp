@@ -36,7 +36,7 @@ export class DialogSignupUserComponent implements OnInit {
       rgoptions: new FormControl(this.option, Validators.required),
       registrationNumber: new FormControl(null, Validators.required),
       courtName: new FormControl(null, Validators.required),
-      chambernumber: new FormControl(null, Validators.required),
+      chamberNumber: new FormControl(null, Validators.required),
       password: new FormControl(null, [
         Validators.required,
         Validators.pattern(this.pwdPattern)

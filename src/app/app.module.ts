@@ -36,9 +36,10 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { LoginDialogComponent } from './dialogs/login-dialog/login-dialog.component';
 import { DialogSignupUserComponent } from './dialogs/dialog-signup-user/dialog-signup-user.component';
 import { MatcherDirective } from './directives/matcher.directive';
+import { PostQueryComponent } from './post-query/post-query.component';
 
 const appRoutes: Routes = [
-  { path: '', component: ServicesComponent },
+  { path: '', component: PostQueryComponent },
   { path: 'about-us', component: AboutUsComponent }
 ];
 
@@ -55,6 +56,7 @@ const appRoutes: Routes = [
     LoginDialogComponent,
     DialogSignupUserComponent,
     MatcherDirective,
+    PostQueryComponent,
   ],
   imports: [
     BrowserModule,
