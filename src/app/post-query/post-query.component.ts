@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post-query.component.css']
 })
 export class PostQueryComponent implements OnInit {
+  selectedCategory = 'c1';
 
   constructor() { }
 

@@ -1,0 +1,10 @@
+.select {
+  padding:30px;
+ -webkit-appearance: none;
+ -moz-appearance: none;
+  appearance: none;
+  margin: 30px;
+  background: darkgrey;
+  color: white;
+  outline: none;
+}
