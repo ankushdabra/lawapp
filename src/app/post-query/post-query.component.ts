@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PostQueryModel } from './post-query.model';
 
 @Component({
   selector: 'app-post-query',
@@ -7,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostQueryComponent implements OnInit {
   selectedCategory = 'c1';
+  title: string ;
+  queryContent: string;
+  queryArray: Array<PostQueryModel> = [new PostQueryModel('1', 'One'), new PostQueryModel('2', 'Two')];
 
   constructor() { }
 
