@@ -1,10 +1,15 @@
 
 export class PostQueryModel {
   title: String;
-  queryDescription: String;
+  category: String;
+  subCategory: String;
+  description: String;
 
-  constructor(title: String, queryDescription: String) {
+
+  constructor(title: String, category: String, subCategory: String, description: String) {
     this.title = title;
-    this.queryDescription = queryDescription;
+    this.category = category;
+    this.subCategory = subCategory;
+    this.description = description;
   }
 }

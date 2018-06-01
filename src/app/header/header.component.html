@@ -13,7 +13,7 @@
     <span style="margin-left:12px;margin-right: 12px">
       <button class="button" color="primary" mat-button routerLink="/about-us">Consult Here</button>
       <button class="button" color="primary" mat-button routerLink="/about-us">About Us</button>
-      <button class="button" color="primary"  mat-button (click)="openDialog()">Login/Signup</button>
+      <button class="button" color="primary" mat-button (mousedown)="openDialog()">Login/Signup</button>
 
       <mat-menu #categories="matMenu">
         <button style="font-weight: 280;font-size: 1.1em;" mat-menu-item [matMenuTriggerFor]="subcategories">CRIMINAL</button>

@@ -37,7 +37,7 @@ import { LoginDialogComponent } from './dialogs/login-dialog/login-dialog.compon
 import { DialogSignupUserComponent } from './dialogs/dialog-signup-user/dialog-signup-user.component';
 import { MatcherDirective } from './directives/matcher.directive';
 import { PostQueryComponent } from './post-query/post-query.component';
-import { PostQueryItemComponent } from './post-query-item/post-query-item.component';
+import { PostQueryItemComponent } from './post-query/post-query-item/post-query-item.component';
 
 const appRoutes: Routes = [
   { path: '', component: PostQueryComponent },

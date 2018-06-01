@@ -1,0 +1,19 @@
+<mat-card class="mat-elevation-z10" style="width: 64%;margin-top: 12px;margin-bottom:12px">
+  <mat-card-header >
+    <mat-card-title style="word-wrap: break-word; font-size:1.3em; font-weight: 400;">
+          {{queryData.title}}
+    </mat-card-title>
+    <mat-card-subtitle style="font-size:1.2em; font-weight: 400;width: fit-content">{{queryData.category}}
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <p style="word-wrap: break-word;overflow: hidden; height: 3em;line-height: 1.5em;font-size:1em;  text-overflow: ellipsis;font-weight: 300;color: lightgrey ">
+      {{queryData.description}} </p>
+  </mat-card-content>
+
+  <mat-card-footer>
+    <button mat-button style="background-color:rgba(211, 211, 211, 0.1);color: white ;font-size:1em;font-weight: 200;margin-left: 24px;margin-right: 24px;margin-bottom: 20px"
+      href="#">2 Replies</button>
+  </mat-card-footer>
+</mat-card>

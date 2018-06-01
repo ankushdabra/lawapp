@@ -7,14 +7,17 @@ import { PostQueryModel } from './post-query.model';
   styleUrls: ['./post-query.component.css']
 })
 export class PostQueryComponent implements OnInit {
-  selectedCategory = 'c1';
-  title: string ;
-  queryContent: string;
-  queryArray: Array<PostQueryModel> = [new PostQueryModel('1', 'One'), new PostQueryModel('2', 'Two')];
+  title;
+  selectedCategory = 'default';
+  selectedSubCategory = 'default';
+  description;
+  queryArray: Array<PostQueryModel> = [];
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  onClick(title: string, category: string, subCategory: string, description: string) {
+    this.queryArray.push(new PostQueryModel(title, category, subCategory, description));
+    console.log(this.queryArray);
   }
-
 }

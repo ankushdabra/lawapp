@@ -3,36 +3,40 @@
     <form>
       <div class="form-group" style="width: 100%;padding-bottom: 20px;">
 
-        <input class="form-control" type="text" style="font-weight: 300; background-color:  rgba(211, 211, 211, 0.1);color: white;width: 100%;padding-top: 20px;padding-bottom: 20px"
-          class="form-control" id="title" placeholder="Enter topic title">
+        <input #titleRef class="form-control" type="text" style="font-weight: 400; background-color:  rgba(211, 211, 211, 0.1);color: white;width: 100%;padding-top: 20px;padding-bottom: 20px"
+          class="form-control" id="title" placeholder="Enter topic title" >
         <br>
 
         <div class="row">
           <div class="col-md-6">
-            <mat-select class="form-control" [(value)]="selectedCategory" style="background-color:  rgba(211, 211, 211, 0.1);color: white;width: 100%;font-weight: 200;padding-top: 10px ;padding-bottom: 28px">
+            <mat-select #categoryRef class="form-control" [(value)]="selectedCategory" style="background-color:  rgba(211, 211, 211, 0.1);color: white;width: 100%;font-weight: 400;padding-top: 10px ;padding-bottom: 28px">
               <mat-option value="default">Category</mat-option>
-              <mat-option value="c1">Category 1</mat-option>
-              <mat-option value="c2">Category 2</mat-option>
-              <mat-option value="c3">Category 3</mat-option>
+              <mat-option value="Category 1">Category 1</mat-option>
+              <mat-option value="Category 2">Category 2</mat-option>
+              <mat-option value="Category 3">Category 3</mat-option>
             </mat-select>
           </div>
           <div class="col-md-6">
-            <mat-select class="form-control" [(value)]="selectedCategory" style="background-color:  rgba(211, 211, 211, 0.1);color: white;width: 100%;font-weight: 200;padding-top: 10px ;padding-bottom: 28px">
+            <mat-select #subCategoryRef class="form-control" [(value)]="selectedSubCategory" style="background-color:  rgba(211, 211, 211, 0.1);color: white;width: 100%;font-weight: 400;padding-top: 10px ;padding-bottom: 28px">
               <mat-option value="default">SubCategory</mat-option>
-              <mat-option value="c1">SubCategory 1</mat-option>
-              <mat-option value="c2">SubCategory 2</mat-option>
-              <mat-option value="c3">SubCategory 3</mat-option>
+              <mat-option value="SubCategory 1">SubCategory 1</mat-option>
+              <mat-option value="SubCategory 2">SubCategory 2</mat-option>
+              <mat-option value="SubCategory 3">SubCategory 3</mat-option>
             </mat-select>
           </div>
         </div>
         <br>
-        <textarea class="form-control" style="font-weight: 300; background-color:  rgba(211, 211, 211, 0.1);color: white;height: 120px;max-width: 100%;max-height: 120px"
-          placeholder="Description"></textarea>
+        <textarea #descriptionRef class="form-control" style="font-weight: 300; background-color:  rgba(211, 211, 211, 0.1);color: white;height: 120px;max-width: 100%;max-height: 120px"
+          placeholder="Description" ></textarea>
         <br>
         <button mat-raised-button style="background-color: darkcyan;color: white ;font-size:1em;font-weight: 300; float: right;"
-          href="#">Post</button>
+          (click)="onClick(titleRef.value,categoryRef.value,subCategoryRef.value ,descriptionRef.value)">Post</button>
       </div>
     </form>
   </mat-card>
-  <app-post-query-item ></app-post-query-item>
+
+  <div *ngFor="let queryData of queryArray">
+    <app-post-query-item
+    [queryData]=queryData></app-post-query-item>
+  </div>
 </div>
