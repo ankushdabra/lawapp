@@ -1,42 +1,85 @@
 <div class="container">
-  <mat-card class="mat-elevation-z10" style="width: 64%;margin-top: 10px;margin-bottom: 20px">
-    <form>
-      <div class="form-group" style="width: 100%;padding-bottom: 20px;">
+  <div class="row">
+    <div class="col-md-8">
+      <mat-card class="mat-elevation-z10" style="width: 100%;margin-top: 10px;margin-bottom: 20px">
+        <form>
+          <div class="form-group" style="width: 100%;padding-bottom: 20px;">
 
-        <input #titleRef class="form-control" type="text" style="font-weight: 400; background-color:  rgba(211, 211, 211, 0.1);color: white;width: 100%;padding-top: 20px;padding-bottom: 20px"
-          class="form-control" id="title" placeholder="Enter topic title" >
-        <br>
+            <input #titleRef class="form-control" type="text" style="font-weight: 400; background-color:  rgba(211, 211, 211, 0.1);color: white;width: 100%;padding-top: 20px;padding-bottom: 20px"
+              class="form-control" id="title" placeholder="Enter topic title">
+            <br>
 
-        <div class="row">
-          <div class="col-md-6">
-            <mat-select #categoryRef class="form-control" [(value)]="selectedCategory" style="background-color:  rgba(211, 211, 211, 0.1);color: white;width: 100%;font-weight: 400;padding-top: 10px ;padding-bottom: 28px">
-              <mat-option value="default">Category</mat-option>
-              <mat-option value="Category 1">Category 1</mat-option>
-              <mat-option value="Category 2">Category 2</mat-option>
-              <mat-option value="Category 3">Category 3</mat-option>
-            </mat-select>
+            <div class="row">
+              <div class="col-md-6">
+                <mat-select #categoryRef class="form-control" [(value)]="selectedCategory" style="background-color:  rgba(211, 211, 211, 0.1);color: white;width: 100%;font-weight: 400;padding-top: 10px ;padding-bottom: 28px">
+                  <mat-option value="default">Category</mat-option>
+                  <mat-option value="Category 1">Category 1</mat-option>
+                  <mat-option value="Category 2">Category 2</mat-option>
+                  <mat-option value="Category 3">Category 3</mat-option>
+                </mat-select>
+              </div>
+              <div class="col-md-6">
+                <mat-select #subCategoryRef class="form-control" [(value)]="selectedSubCategory" style="background-color:  rgba(211, 211, 211, 0.1);color: white;width: 100%;font-weight: 400;padding-top: 10px ;padding-bottom: 28px">
+                  <mat-option value="default">SubCategory</mat-option>
+                  <mat-option value="SubCategory 1">SubCategory 1</mat-option>
+                  <mat-option value="SubCategory 2">SubCategory 2</mat-option>
+                  <mat-option value="SubCategory 3">SubCategory 3</mat-option>
+                </mat-select>
+              </div>
+            </div>
+            <br>
+            <textarea #descriptionRef class="form-control" style="font-weight: 300; background-color:  rgba(211, 211, 211, 0.1);color: white;height: 120px;max-width: 100%;max-height: 120px"
+              placeholder="Description"></textarea>
+            <br>
+            <button mat-raised-button style="background-color: darkcyan;color: white ;font-size:1em;font-weight: 300; float: right;"
+              (click)="onClick(titleRef.value,categoryRef.value,subCategoryRef.value ,descriptionRef.value)">Post</button>
           </div>
-          <div class="col-md-6">
-            <mat-select #subCategoryRef class="form-control" [(value)]="selectedSubCategory" style="background-color:  rgba(211, 211, 211, 0.1);color: white;width: 100%;font-weight: 400;padding-top: 10px ;padding-bottom: 28px">
-              <mat-option value="default">SubCategory</mat-option>
-              <mat-option value="SubCategory 1">SubCategory 1</mat-option>
-              <mat-option value="SubCategory 2">SubCategory 2</mat-option>
-              <mat-option value="SubCategory 3">SubCategory 3</mat-option>
-            </mat-select>
-          </div>
-        </div>
-        <br>
-        <textarea #descriptionRef class="form-control" style="font-weight: 300; background-color:  rgba(211, 211, 211, 0.1);color: white;height: 120px;max-width: 100%;max-height: 120px"
-          placeholder="Description" ></textarea>
-        <br>
-        <button mat-raised-button style="background-color: darkcyan;color: white ;font-size:1em;font-weight: 300; float: right;"
-          (click)="onClick(titleRef.value,categoryRef.value,subCategoryRef.value ,descriptionRef.value)">Post</button>
+        </form>
+      </mat-card>
+
+      <div *ngFor="let queryData of queryArray">
+        <app-post-query-item [queryData]=queryData></app-post-query-item>
       </div>
-    </form>
-  </mat-card>
+    </div>
+    <div class="col-md-4">
+      <mat-card class="mat-elevation-z10" style="width: 100%;margin-top: 10px;margin-bottom: 20px">
+        <p style="font-size: 1.2em">Follow us</p>
+        <hr style="margin-top: 0px;margin-bottom: 12px">
+        <mat-list>
+          <button mat-button style="background-color: #3b5998;color: white ;padding:4px;font-size:1em;font-weight: 300;width: 100%;"
+            href="#">Follow us on Facebook</button>
+          <button mat-button style="background-color: #dd4b39;color: white ;padding:4px;font-size:1em;font-weight: 300;width: 100%;margin-top: 12px;"
+            href="#">Follow us on Google</button>
+        </mat-list>
+      </mat-card>
+      <mat-card class="mat-elevation-z10" style="width: 100%;margin-top: 10px;margin-bottom: 20px">
+        <p style="font-size: 1.2em">Latest News</p>
+        <hr style="margin-top: 0px;margin-bottom: 12px">
+        <mat-list>
+          <a href="#" style="color: white">
+            <p style="font-size: 1em;color: white">1. Lorem ipsum dolor sit amet, usu nominati salutandi ad. Quo inani tation ne, labore iriure maiorum sed ne,
+              qui meis equidem mediocrem eu.</p>
+          </a>
+          <a href="#" style="color: white">
+            <p style="font-size: 1em;color: white">2. Lorem ipsum dolor sit amet, usu nominati salutandi ad. Quo inani tation ne, labore iriure maiorum sed ne,
+              qui meis equidem mediocrem eu.</p>
+          </a>
+          <a href="#" style="color: white">
+            <p style="font-size: 1em;color: white">3. Lorem ipsum dolor sit amet, usu nominati salutandi ad. Quo inani tation ne, labore iriure maiorum sed ne,
+              qui meis equidem mediocrem eu.</p>
+          </a>
+          <a href="#" style="color: white">
+            <p style="font-size: 1em;color: white">4. Lorem ipsum dolor sit amet, usu nominati salutandi ad. Quo inani tation ne, labore iriure maiorum sed ne,
+              qui meis equidem mediocrem eu.</p>
+          </a>
+          <a href="#" style="color: white">
+            <p style="font-size: 1em;color: white">5. Lorem ipsum dolor sit amet, usu nominati salutandi ad. Quo inani tation ne, labore iriure maiorum sed ne,
+              qui meis equidem mediocrem eu.</p>
+          </a>
 
-  <div *ngFor="let queryData of queryArray">
-    <app-post-query-item
-    [queryData]=queryData></app-post-query-item>
+        </mat-list>
+      </mat-card>
+
+    </div>
   </div>
 </div>

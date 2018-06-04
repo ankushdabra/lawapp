@@ -41,6 +41,7 @@ import { PostQueryItemComponent } from './post-query/post-query-item/post-query-
 
 const appRoutes: Routes = [
   { path: '', component: PostQueryComponent },
+  { path: 'post-query', component: PostQueryComponent },
   { path: 'about-us', component: AboutUsComponent }
 ];
 
