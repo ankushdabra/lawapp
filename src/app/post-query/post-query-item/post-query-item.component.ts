@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./post-query-item.component.css']
 })
 export class PostQueryItemComponent implements OnInit {
-
+  showHide: boolean;
   @Input() queryData: {
     title: String;
     category: String;

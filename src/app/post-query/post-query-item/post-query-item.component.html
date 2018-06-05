@@ -5,13 +5,39 @@
   <p style="word-wrap: break-word; overflow: hidden;font-size:1.1em;font-weight: 400;text-overflow: ellipsis;color: lightgrey ">
     {{queryData.category}} - {{queryData.subCategory}}</p>
 
-    <mat-card-content>
+  <mat-card-content>
     <p style="word-wrap: break-word;overflow: hidden; font-size:1.1em;  text-overflow: ellipsis;font-weight: 300;color: lightgrey ">
       {{queryData.description}} </p>
   </mat-card-content>
 
   <mat-card-footer>
     <button mat-button style="background-color:rgba(211, 211, 211, 0.1);color: white ;font-size:1em;font-weight: 200;margin-left: 24px;margin-right: 24px;margin-bottom: 20px"
-      href="#">2 Replies</button>
+      href="#" (click)="showHide = !showHide">2 Replies</button>
+
   </mat-card-footer>
+
+</mat-card>
+
+<mat-card *ngIf="showHide" class="mat-elevation-z10" style="width: 100%;margin-top: 12px;margin-bottom:12px;padding: 0px">
+  <mat-card   *ngFor="let i of [1,2]" style="width: 100%;margin-top: 1px;margin-bottom:1px;padding-bottom: 30px">
+  <p style="word-wrap: break-word;overflow: hidden; font-size:1.3em;font-weight: 400;color: lightgrey ">
+    Lawyer Name</p>
+
+  <p style="word-wrap: break-word;overflow: hidden; font-size:1.1em;  text-overflow: ellipsis;font-weight: 300;color: lightgrey ">
+    Lorem ipsum dolor sit amet, usu nominati salutandi ad. Quo inani tation ne, labore iriure maiorum sed ne, qui meis equidem
+    mediocrem eu. </p>
+    <mat-card-actions align="end" style="padding: 0px">
+      <button mat-icon-button class="mat-elevation-z2" style="background-color:rgba(211, 211, 211, 0.1);color: white ;margin-left:6px; margin-right: 6px">
+        <mat-icon color="primary">favorite</mat-icon>
+      </button>
+      <button mat-icon-button class="mat-elevation-z2" style="background-color:rgba(211, 211, 211, 0.1);color: white ;margin-left:6px; margin-right: 6px">
+        <mat-icon color="primary">thumb_up</mat-icon>
+      </button>
+      <button mat-icon-button class="mat-elevation-z2" style="background-color:rgba(211, 211, 211, 0.1);color: white ;margin-left:6px; margin-right: 6px">
+        <mat-icon color="primary">thumb_down</mat-icon>
+      </button>
+    </mat-card-actions>
+
+</mat-card>
+
 </mat-card>
