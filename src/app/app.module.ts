@@ -19,6 +19,7 @@ import {
   MatAutocompleteModule,
   MatDialogModule,
   MatRadioModule,
+  MatSidenavModule,
   MatSlideToggleModule
 } from '@angular/material';
 
@@ -81,6 +82,7 @@ const appRoutes: Routes = [
     MatAutocompleteModule,
     MatDialogModule,
     MatRadioModule,
+    MatSidenavModule,
     MatSlideToggleModule,
     RouterModule.forRoot(appRoutes)
   ],
